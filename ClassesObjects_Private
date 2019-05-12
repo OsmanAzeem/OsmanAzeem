@@ -1,0 +1,107 @@
+class Person {
+	private static String name;
+	private int Age;
+	private String Occupation;
+	private int Salary;
+	private String Race;
+	private String Address;
+	private String PhoneNum;
+	private String Laguage;
+	private String CountryOfBirth;
+
+	void Person1() {
+		System.out.println("PATRON BIOGRAPHY:");
+		System.out.println("-----------------------------");
+		System.out.println("Name: " + getName() + "\n" + "Age: " + getAge() + "\n" + "Occupation: " + getOccupation() + "\n"
+				+ "Salary: $" + getSalary() + "\n" + "Race: " + getRace() + "\n" + "Place Of Birth: " + getCountryOfBirth() + "\n"
+				+ "First Language: " + getLaguage() + "\n" + "Address: " + getAddress() + "\n" + "Phone#: " + getPhoneNum());
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return Age;
+	}
+
+	public void setAge(int age) {
+		Age = age;
+	}
+
+	public String getOccupation() {
+		return Occupation;
+	}
+
+	public void setOccupation(String occupation) {
+		Occupation = occupation;
+	}
+
+	public int getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(int salary) {
+		Salary = salary;
+	}
+
+	public String getRace() {
+		return Race;
+	}
+
+	public void setRace(String race) {
+		Race = race;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+
+	public String getPhoneNum() {
+		return PhoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) {
+		PhoneNum = phoneNum;
+	}
+
+	public String getLaguage() {
+		return Laguage;
+	}
+
+	public void setLaguage(String laguage) {
+		Laguage = laguage;
+	}
+
+	public String getCountryOfBirth() {
+		return CountryOfBirth;
+	}
+
+	public void setCountryOfBirth(String countryOfBirth) {
+		CountryOfBirth = countryOfBirth;
+	}
+}
+
+public class Demo {
+	public static void main(String[] args) {
+		Person person1 = new Person();
+		person1.setName("Ali Mustafa");
+		person1.setAge(48);
+		person1.setOccupation("Music Producer");
+		person1.setSalary(50000);
+		person1.setRace("South East-Asian");
+		person1.setAddress("300 Horizon Tower\n\t Ajman, Dubai UAE.");
+		person1.setPhoneNum("+965-6430555.");
+		person1.setLaguage("Urdu Speaking");
+		person1.setCountryOfBirth("Pakistan");
+		person1.Person1();
+	}
+}
