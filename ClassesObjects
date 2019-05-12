@@ -1,0 +1,35 @@
+class Person {
+	String name;
+	int Age;
+	String Occupation;
+	int Salary;
+	String Race;
+	String Address;
+	String PhoneNum;
+	String Laguage;
+	String CountryOfBirth;
+
+	void Person1() {
+		System.out.println("PATRON BIOGRAPHY:");
+		System.out.println("-----------------------------");
+		System.out.println("Name: " + name + "\n" + "Age: " + Age + "\n" + "Occupation: " + Occupation + "\n"
+				+ "Salary: $" + Salary + "\n" + "Race: " + Race + "\n" + "Place Of Birth: " + CountryOfBirth + "\n"
+				+ "First Language: " + Laguage + "\n" + "Address: " + Address + "\n" + "Phone#: " + PhoneNum);
+	}
+}
+
+public class ClassesObjects {
+	public static void main(String[] args) {
+		Person person1 = new Person();
+		person1.name = "Ali Mustafa";
+		person1.Age = 48;
+		person1.Occupation = "Music Producer";
+		person1.Salary = 50000;
+		person1.Race = "South East-Asian";
+		person1.Address = "300 Horizon Tower\n\t Ajman, Dubai UAE.";
+		person1.PhoneNum = "+965-6430555.";
+		person1.Laguage = "Urdu Speaking";
+		person1.CountryOfBirth = "Pakistan";
+		person1.Person1();
+	}
+}
