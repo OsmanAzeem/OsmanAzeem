@@ -1,0 +1,83 @@
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.function.DoubleBinaryOperator;
+
+public class HW5Main{
+
+	public static void main(String[] args) {
+        
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter a postfix arithmetic expression: ");
+		String expr = input.nextLine();
+
+		System.out.println(expr + " = " + PostFixExpression(expr));
+		double result = oper((a, b) -> power(a, b), 3, 2);
+      
+
+	}
+	private static double PostFixExpression(String expr) {
+		Stack<Double> s = new Stack<>();
+		Scanner input = new Scanner(expr);
+		
+		while (input.hasNext()) {
+			if (input.hasNextDouble()) {
+				double i = input.nextDouble();
+				s.push(i);
+
+			} else  {
+				double b = s.pop();
+				double a = s.pop();
+				String op = input.next();
+				
+
+				if (op.equals("+")) {
+					s.push (add(a , b));
+				} else if (op.equals("-")) {
+					s.push(subtract(a , b));
+				} else if (op.equals("*")) {
+					s.push(multiply(a , b));
+				} else if (op.equals("/")) {
+					s.push(divide (a , b));
+				} else if (op.equals("^")) {
+					s.push((power(a, b)));
+				}	else
+				
+				System.out.println("Improperly formed expression! ");
+					
+
+				}
+
+			}
+		
+		return s.pop();
+	}
+
+
+
+	
+	
+	public static double add(double a, double b) {
+        return a + b;
+    }
+ 
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+    
+    public static double divide(double a, double b) {
+        return a / b;
+    }
+    
+    public static double subtract(double a, double b){
+        return a - b;
+    }
+    public static double power(double a, double b) {
+    	return Math.pow(a, b);
+    }
+ 
+ 
+    public static double oper(DoubleBinaryOperator operator, int a, int b) {
+        return operator.applyAsDouble(a, b);
+    }
+}
